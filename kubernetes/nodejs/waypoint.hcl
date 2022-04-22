@@ -14,8 +14,8 @@ app "example-nodejs" {
     use "pack" {}
     registry {
       use "docker" {
-        image = "example-nodejs"
-        tag   = "1"
+        image = "ttl.sh/example-nodejs"
+        tag   = "1h"
         local = true
       }
     }
