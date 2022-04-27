@@ -15,7 +15,7 @@ app "example-nodejs" {
     use "pack" {}
     registry {
       use "docker" {
-        image = "ttl.sh/example-nodejs-v1"
+        image = "ttl.sh/example-nodejs-${gitrefpretty()}"
         tag   = "5m"
         local = true
       }
