@@ -4,7 +4,7 @@ project = "example-nodejs"
 
 app "example-nodejs" {
   runner {
-    profile = "secondary-cluster-odr"
+    profile = "odrsecondary"
   }
   labels = {
     "service" = "example-nodejs",
