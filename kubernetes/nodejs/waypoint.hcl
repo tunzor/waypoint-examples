@@ -1,10 +1,11 @@
 project = "example-nodejs"
 # test   
-runner {
-  profile = "secondary-cluster-odr"
-}
+
 
 app "example-nodejs" {
+  runner {
+    profile = "secondary-cluster-odr"
+  }
   labels = {
     "service" = "example-nodejs",
     "env"     = "dev"
