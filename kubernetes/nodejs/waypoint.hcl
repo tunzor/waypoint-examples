@@ -15,7 +15,7 @@ app "example-nodejs" {
     use "pack" {}
     registry {
       use "docker" {
-        image = "561656980159.dkr.ecr.ca-central-1.amazonaws.com/waypoint-ecr/example-nodejs"
+        image = "public.ecr.aws/t9f2n2b5/wp-test/example-nodejs"
         tag   = "${gitrefpretty()}"
         local = true
       }
