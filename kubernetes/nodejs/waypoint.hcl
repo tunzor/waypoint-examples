@@ -29,15 +29,27 @@ app "nodejs-example" {
 
   build {
     use "pack" {}
+#     registry {
+#       use "docker" {
+#         image = "${var.registry_hostname}/waypoint-ecr"
+#         #tag   = "${gitrefpretty()}"
+#         tag = "latest"
+#         username = var.registry_username
+#         password = var.registry_password
+#         local = false
+#       }
+#     }
     registry {
-      use "docker" {
-        image = "${var.registry_hostname}/waypoint-ecr"
-        #tag   = "${gitrefpretty()}"
-        tag = "latest"
-        username = var.registry_username
-        password = var.registry_password
-        local = false
-      }
+        use "aws-ecr" {
+          region = "ca-central-1"
+          repository = "waypoint-ecr"
+          tag = "latest"
+          auth {
+            hostname = var.registry_hostname
+            username = var.registry_username
+            password = var.registry_password
+          }
+        }
     }
   }
 
