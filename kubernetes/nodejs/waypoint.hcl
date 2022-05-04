@@ -1,18 +1,18 @@
-variable "registry_username" {
-  type = string
-  default = "AWS"
-}
+# variable "registry_username" {
+#   type = string
+#   default = "AWS"
+# }
 
-variable "registry_password" {
-  type = string
-  default = null
-  env = ["repo_pass"]
-}
+# variable "registry_password" {
+#   type = string
+#   default = null
+#   env = ["repo_pass"]
+# }
 
-variable "registry_hostname" {
-  type = string
-  env = ["repo_host"]
-}
+# variable "registry_hostname" {
+#   type = string
+#   env = ["repo_host"]
+# }
 
 #test
 
