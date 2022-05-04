@@ -1,8 +1,17 @@
+variable "registry_username" {
+  type = string
+  default = "AWS"
+}
+
+variable "registry_password" {
+  type = string
+  default = ""
+}
+
 project = "example-nodejs"
 runner {
   profile = "secondary-cluster-odr"
 }
-# test d
 
 app "example-nodejs" {
   
@@ -17,6 +26,8 @@ app "example-nodejs" {
       use "docker" {
         image = "example-nodejs"
         tag   = "${gitrefpretty()}"
+        username = var.registry_username
+        password = var.registry_password
       }
     }
   }
