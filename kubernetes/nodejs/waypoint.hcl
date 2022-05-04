@@ -5,6 +5,7 @@ variable "registry_username" {
 
 variable "registry_password" {
   type = string
+  sensitive = true
   default = ""
 }
 
