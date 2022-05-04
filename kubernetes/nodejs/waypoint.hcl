@@ -32,7 +32,8 @@ app "nodejs-example" {
     registry {
       use "docker" {
         image = "${var.registry_hostname}/waypoint-ecr"
-        tag   = "${gitrefpretty()}"
+        #tag   = "${gitrefpretty()}"
+        tag = "latest"
         username = var.registry_username
         password = var.registry_password
         local = false
