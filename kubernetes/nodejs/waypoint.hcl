@@ -5,7 +5,8 @@ variable "registry_username" {
 
 variable "registry_password" {
   type = string
-  default = var.repo_pass
+  default = null
+  env = ["repo_pass"]
 }
 #test
 
