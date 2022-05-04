@@ -5,7 +5,7 @@ variable "registry_username" {
 
 variable "registry_password" {
   type = string
-  default = ""
+  default = null
 }
 
 project = "example-nodejs"
