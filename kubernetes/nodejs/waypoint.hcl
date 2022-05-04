@@ -11,7 +11,7 @@ variable "registry_password" {
 
 variable "registry_hostname" {
   type = string
-  default = "561656980159.dkr.ecr.ca-central-1.amazonaws.com/waypoint-ecr"
+  env = ["repo_host"]
 }
 
 #test
