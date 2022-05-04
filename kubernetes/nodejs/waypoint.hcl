@@ -8,6 +8,12 @@ variable "registry_password" {
   default = null
   env = ["repo_pass"]
 }
+
+variable "registry_hostname" {
+  type = string
+  default = "561656980159.dkr.ecr.ca-central-1.amazonaws.com/waypoint-ecr"
+}
+
 #test
 
 project = "example-nodejs"
@@ -26,7 +32,7 @@ app "example-nodejs" {
     use "pack" {}
     registry {
       use "docker" {
-        image = "example-nodejs"
+        image = "${var.registry_hostname}/example-nodejs"
         tag   = "${gitrefpretty()}"
         username = var.registry_username
         password = var.registry_password
