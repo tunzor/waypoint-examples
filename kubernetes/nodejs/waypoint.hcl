@@ -30,7 +30,7 @@ app "nodejs-example" {
     use "pack" {}
     registry {
       use "docker" {
-        image = "${var.registry_hostname}/example-nodejs"
+        image = "${var.registry_hostname}/waypoint-ecr"
         tag   = "${gitrefpretty()}"
         username = var.registry_username
         password = var.registry_password
