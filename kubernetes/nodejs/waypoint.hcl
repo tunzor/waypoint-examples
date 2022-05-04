@@ -10,9 +10,9 @@ variable "registry_password" {
 #test
 
 project = "example-nodejs"
-runner {
-  profile = "secondary-cluster-odr"
-}
+#runner {
+#  profile = "secondary-cluster-odr"
+#}
 
 app "example-nodejs" {
   
