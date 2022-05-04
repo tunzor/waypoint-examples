@@ -5,7 +5,7 @@ variable "registry_username" {
 
 variable "registry_password" {
   type = string
-  default = null
+  default = ""
 }
 
 variable "registry_hostname" {
