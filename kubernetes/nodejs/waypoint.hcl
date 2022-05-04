@@ -36,6 +36,7 @@ app "example-nodejs" {
         tag   = "${gitrefpretty()}"
         username = var.registry_username
         password = var.registry_password
+        local = false
       }
     }
   }
