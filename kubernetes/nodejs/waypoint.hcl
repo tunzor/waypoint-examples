@@ -7,6 +7,7 @@ variable "registry_password" {
   type = string
   default = var.repo_pass
 }
+#test
 
 project = "example-nodejs"
 runner {
