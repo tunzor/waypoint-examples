@@ -17,7 +17,7 @@ variable "registry_hostname" {
 project = "nodejs-example"
 #runner {
 #  profile = "secondary-cluster-odr"
-#}    
+#}     
 
 
 app "nodejs-example" {
