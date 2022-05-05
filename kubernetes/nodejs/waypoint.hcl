@@ -31,7 +31,7 @@ app "nodejs-example" {
     use "pack" {}
     registry {
       use "docker" {
-        image = "${var.registry_hostname}/${var.registry_username}/nodejs-example"
+        image = "${var.registry_hostname}/${var.registry_username}/examplenodejs"
         tag   = "${gitrefpretty()}"
 #         tag = "latest"
         username = var.registry_username
