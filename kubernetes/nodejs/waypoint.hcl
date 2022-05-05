@@ -1,6 +1,6 @@
 variable "registry_username" {
   type = string
-  default = "AWS"
+  default = ""
 }
 
 variable "registry_password" {
@@ -29,28 +29,28 @@ app "nodejs-example" {
 
   build {
     use "pack" {}
-#     registry {
-#       use "docker" {
-#         image = "${var.registry_hostname}/waypoint-ecr"
-#         #tag   = "${gitrefpretty()}"
-#         tag = "latest"
-#         username = var.registry_username
-#         password = var.registry_password
-#         local = false
-#       }
-#     }
     registry {
-        use "aws-ecr" {
-          region = "ca-central-1"
-          repository = "waypoint-ecr"
-          tag = "latest"
-          auth {
-            hostname = var.registry_hostname
-            username = var.registry_username
-            password = var.registry_password
-          }
-        }
+      use "docker" {
+        image = "${var.registry_hostname}/${var.registry_username}/nodejs-example"
+        tag   = "${gitrefpretty()}"
+#         tag = "latest"
+        username = var.registry_username
+        password = var.registry_password
+        local = false
+      }
     }
+#     registry {
+#         use "aws-ecr" {
+#           region = "ca-central-1"
+#           repository = "waypoint-ecr"
+#           tag = "latest"
+#           auth {
+#             hostname = var.registry_hostname
+#             username = var.registry_username
+#             password = var.registry_password
+#           }
+#         }
+#     }
   }
 
   deploy {
