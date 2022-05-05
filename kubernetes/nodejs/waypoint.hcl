@@ -37,6 +37,7 @@ app "nodejs-example" {
         username = var.registry_username
         password = var.registry_password
         local = false
+        insecure = true
       }
     }
 #     registry {
