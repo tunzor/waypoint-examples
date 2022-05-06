@@ -9,7 +9,7 @@ variable "registry_password" {
   default = ""
 }
 
-variable "registry_hostname" {
+variable "registry_imagename" {
   type = string
   default = ""
 }
