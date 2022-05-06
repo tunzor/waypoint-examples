@@ -1,18 +1,18 @@
-# variable "registry_username" {
-#   type = string
-#   default = ""
-# }
+variable "registry_username" {
+  type = string
+  default = ""
+}
 
-# variable "registry_password" {
-#   type = string
-#   sensitive = true
-#   default = ""
-# }
+variable "registry_password" {
+  type = string
+  sensitive = true
+  default = ""
+}
 
-# variable "registry_imagename" {
-#   type = string
-#   default = ""
-# }
+variable "registry_imagename" {
+  type = string
+  default = ""
+}
 
 project = "nodejs-example"
 #runner {
