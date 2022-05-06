@@ -1,6 +1,7 @@
 variable "registry_username" {
   type = string
   default = ""
+  env = ["REGISTRY_USERNAME"]
 }
 
 variable "registry_password" {
