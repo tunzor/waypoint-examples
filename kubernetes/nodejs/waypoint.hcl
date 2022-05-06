@@ -8,11 +8,13 @@ variable "registry_password" {
   type = string
   sensitive = true
   default = ""
+  env = ["REGISTRY_PASSWORD"]
 }
 
 variable "registry_imagename" {
   type = string
   default = ""
+  env = ["REGISTRY_IMAGENAME"]
 }
 
 project = "nodejs-example"
